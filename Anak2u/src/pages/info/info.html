@@ -1,0 +1,82 @@
+<!--
+  Generated template for the InfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="nav">
+    <ion-title>Student Info</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="getBack()">
+            <ion-icon name="ios-arrow-down"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list *ngIf="stu">
+        
+          <ion-item>
+            <ion-label fixed>Name</ion-label>
+            <ion-label fixed item-end>{{stu.student_name}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-label fixed>MyKid Number</ion-label>
+              <ion-label fixed item-end>{{stu.mykid_number}}</ion-label>
+          </ion-item>
+        
+          <ion-item>
+              <ion-label fixed>Age</ion-label>
+              <ion-label fixed item-end>{{stu.age}}Years</ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-label fixed>Hobby</ion-label>
+              <ion-label fixed item-end>{{stu.hobby}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-label fixed>Birthday</ion-label>
+              <ion-label fixed item-end>{{stu.birthday}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-label fixed>Ambition</ion-label>
+              <ion-label fixed item-end>{{stu.ambition}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-label fixed>Allergies</ion-label>
+              <ion-label fixed item-end>{{stu.allergies}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-label fixed>Height</ion-label>
+              <ion-label fixed item-end>{{stu.height}}CM</ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-label fixed>Weight</ion-label>
+              <ion-label fixed item-end>{{stu.weight}}KG</ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-label fixed>BMI</ion-label>
+              <ion-label fixed item-end>{{stu.bmi}}</ion-label>
+          </ion-item>
+
+          <ion-item>
+              <ion-label fixed>Blood Type</ion-label>
+              <ion-label fixed item-end>{{stu.blood_type}}</ion-label>
+          </ion-item>
+        
+    </ion-list>
+
+</ion-content>

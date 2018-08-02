@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ChatMePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="nav">
+  <ion-buttons end>
+      <button ion-button icon-only (click)="getBack()">
+        <ion-icon name="ios-arrow-down"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Wan Muz</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding text-wrap>
+
+  <ion-item no-lines>
+    <ion-avatar item-start>
+      <img src="../assets/imgs/opah.png"> 
+    </ion-avatar>
+    <h6>Salam Cikgu. Minta tengokkan Aiman, malam semalam dia tidur lewat pula.</h6>
+  </ion-item>
+
+  <ion-item no-lines>
+    <h6 item-end>Baiklah Puan. Apa-apa saya update</h6>
+    <ion-avatar item-end>
+      <img src="../assets/imgs/guru.png"> 
+    </ion-avatar>
+  </ion-item>
+<ion-item no-lines>
+    <ion-avatar item-start>
+      <img src="../assets/imgs/opah.png"> 
+    </ion-avatar>
+    <h6>Terima kasih!</h6>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-item>
+    <ion-input type="text" placeholder="Type a message"></ion-input>
+    <ion-icon name="md-send" item-end (click)="getMessage()"></ion-icon>
+  </ion-item>
+</ion-footer>
+

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="nav">
+    <ion-title>
+      My Infant
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    
+        <ion-item no-lines class="profileImg" *ngIf="prostu">
+            <img src="assets/bg.jpg">
+            <ion-avatar>
+                <img src="{{prostu.image_url}}" (click)="getInfo(prostu)" alt="Franklin">
+                <h1>{{prostu.student_name}}</h1>
+            </ion-avatar>
+          </ion-item>
+    <div text-center>
+      <button ion-button icon-start>
+        <ion-icon name="videocam"></ion-icon>
+      Live Feed
+    </button>
+    </div>
+          <ion-card *ngFor="let report of reports">
+              
+            <img src="{{report.image_url}}">
+              
+              <ion-card-content>
+                <p>
+                  {{report.message}}
+              </p>
+    
+              </ion-card-content>
+    
+                  <ion-col>
+                    <button ion-button clear small color="danger" icon-start>
+                      <ion-icon name='star'></ion-icon>
+                      Favorite
+                    </button>
+                  </ion-col>
+                  <ion-col text-right>
+                    <button ion-button clear small color="danger" icon-start>
+                      <ion-icon name='share-alt'></ion-icon>
+                      Share
+                    </button>
+                  </ion-col>
+
+                  <!-- <ion-fab>
+                      <button ion-fab><ion-icon name="ios-calendar-outline"></ion-icon></button>
+                  </ion-fab> -->
+    
+          </ion-card>
+    
+    </ion-content>

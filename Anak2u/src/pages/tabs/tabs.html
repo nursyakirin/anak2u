@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="nav" hideBackButton>
+    <ion-title>EEzy APP</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="getOut()">
+          <ion-icon name="ios-contact-outline"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-tabs color="nav">
+  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Chat ME" tabIcon="ios-chatbubbles-outline"></ion-tab>
+</ion-tabs>

@@ -1,0 +1,41 @@
+<!--
+  Generated template for the StudentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="nav">
+    <ion-title>Invoice</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label fixed>Annual Fee</ion-label>
+        <ion-label fixed item-end>RM 900.00</ion-label>
+    </ion-item>
+
+    <ion-item>
+        <ion-label fixed>Foods</ion-label>
+        <ion-label fixed item-end>RM250.00</ion-label>
+    </ion-item>
+
+    <ion-item>
+        <ion-label fixed>GST(6%)</ion-label>
+        <ion-label fixed item-end>RM125.00</ion-label>
+    </ion-item>
+
+    <ion-item>
+        <ion-label fixed>Total</ion-label>
+        <ion-label fixed item-end>RM1275.00</ion-label>
+    </ion-item>
+
+    <button ion-button color="secondary" full (click)="getPay()">Pay Here</button>
+    <button ion-button color="danger" full (click)="getBack()">Cancel</button>
+
+</ion-content>

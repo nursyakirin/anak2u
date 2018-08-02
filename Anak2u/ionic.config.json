@@ -1,0 +1,7 @@
+{
+  "name": "SMIDEX",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

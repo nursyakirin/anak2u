@@ -1,0 +1,76 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="nav">
+    <ion-title>Student Info</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="getBack()">
+          <ion-icon name="ios-arrow-down"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-item no-lines class="profileImg" *ngIf="prostu">
+        <img src="assets/bg.jpg">
+        <ion-avatar>
+            <img src="{{prostu.image_url}}" (click)="getInfo(prostu)" alt="Franklin">
+            <h1>{{prostu.student_name}}</h1>
+        </ion-avatar>
+      </ion-item>
+      <div text-center>
+        <button ion-button icon-start>
+          <ion-icon name="call"></ion-icon>
+        Call
+      </button>
+      <button (click)="getInfo(prostu)" ion-button icon-start>
+        <ion-icon name="information-circle"></ion-icon>
+      Info
+    </button>
+  </div>
+
+      <ion-toolbar padding class="button">
+          <button ion-button>Call</button>
+          <button ion-button item-end>Message</button>
+        </ion-toolbar>
+
+      <ion-card *ngFor="let report of reports">
+          
+        <img src="{{report.image_url}}">
+          
+          <ion-card-content>
+            <p>
+              {{report.message}}
+          </p>
+
+          </ion-card-content>
+
+              <ion-col>
+                <button ion-button clear small color="danger" icon-start>
+                  <ion-icon name='star'></ion-icon>
+                  Favorite
+                </button>
+              </ion-col>
+              <ion-col text-right>
+                <button ion-button clear small color="danger" icon-start>
+                  <ion-icon name='share-alt'></ion-icon>
+                  Share
+                </button>
+              </ion-col>
+
+      </ion-card>
+
+      <ion-fab right bottom>
+          <button ion-fab color="but" (click)="getNew()"><ion-icon name="ios-add-outline"></ion-icon></button>
+      </ion-fab>
+
+</ion-content>

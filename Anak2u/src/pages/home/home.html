@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="nav" hideBackButton>
+    <ion-title>EzzY</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="getOut()">
+          <ion-icon name="ios-contact-outline"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <ion-list>
+        <ion-list-header>
+          Kelas Matahari
+        </ion-list-header>
+    
+        <ion-item-sliding *ngFor="let pro of prostu">
+          <ion-item (click)="getProfile(pro)">
+            <ion-thumbnail item-start>
+              <img src="{{pro.image_url}}">
+            </ion-thumbnail>
+            <h2>{{pro.student_name}}</h2>
+            <p>{{pro.age}} Year Old</p>
+          </ion-item>
+          <ion-item-options>
+            <button ion-button color="light" icon-start>
+              <ion-icon name="ios-more"></ion-icon>
+              More
+            </button>
+            <button ion-button color="primary" icon-start>
+              <ion-icon name="text"></ion-icon>
+              Text
+            </button>
+            <button ion-button color="secondary" icon-start>
+              <ion-icon name="call"></ion-icon>
+              Call
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+    </ion-list>
+
+    <ion-fab right bottom>
+        <button ion-fab color="but"><ion-icon name="arrow-dropleft"></ion-icon></button>
+        <ion-fab-list side="left">
+          <button ion-fab><ion-icon name="ios-calendar-outline" (click)="getCalender()"></ion-icon></button>
+          <button ion-fab><ion-icon name="ios-book-outline" (click)="getTFeed()"></ion-icon></button>
+        </ion-fab-list>
+      </ion-fab>
+    
+</ion-content>

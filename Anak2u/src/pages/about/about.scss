@@ -1,0 +1,29 @@
+page-about {
+
+    ion-item img{
+        //filter: blur(10px);
+        height: 150px;
+        width: 100%;
+        background-position: center center;
+    }
+
+    ion-avatar img {
+        margin: auto;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        width: 130px !important;
+        height: 130px !important;
+        border-radius: 50%;
+        margin-top: -105px;
+    }
+
+    ion-content button{
+        width: 130px;
+        text-align: center;
+    }
+
+    ion-avatar h1 {
+        text-align: center;
+    }
+
+}

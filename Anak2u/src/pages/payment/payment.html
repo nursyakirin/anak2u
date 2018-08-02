@@ -1,0 +1,47 @@
+<!--
+  Generated template for the PaymentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="nav">
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item text-center no-lines>
+        We Accept
+      </ion-item>
+    
+      <img src="../assets/creditcard.jpg">
+    
+      <ion-item>
+          <ion-label stacked>Card Holder Name</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Card Number</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label stacked>Expiry Date</ion-label>
+        <ion-datetime displayFormat="MMM YYYY" [(ngModel)]="timeEnds"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>CVV</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <button ion-button color="secondary" full (click)="getPaid()">Pay Here</button>
+      <button ion-button color="danger" full (click)="getBack()">Cancel</button>
+
+</ion-content>
